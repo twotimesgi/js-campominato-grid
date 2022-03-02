@@ -11,20 +11,17 @@ body{
 
 header{
     background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10vh;
+    height: 9vh;
 }
 
 footer{
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     height: 7vh;
+}
+
+main{
+    position: relative;
+    height: 84vh;
 }
 
 .header_container{
@@ -60,23 +57,44 @@ footer{
 }
 
 .field{
-    width: 30vw;
-    height: 30vw;
-    background-color: red;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    display: flex;
+    flex-wrap: wrap; 
+    height: 40vw;
+    width: 40vw;  
 }
 
-.container .text{
+.field .text{
     text-align: center;
     width: 100%;
-    line-height: 30vw;
 }
 
-.cell{
-    width: 3vw;
-    height: 3vw;
-    border: 1px solid;
+.field .cell{
+border: 1px solid black;
+display: flex;
+justify-content: center;
+align-items: center; 
+}
+
+.field[data-diff="Easy"] .cell{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.field[data-diff="Medium"] .cell{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+} 
+
+.field[data-diff="Hard"] .cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.clicked{
+    background-color: rgb(109,150,231);
+    color: white;
 }
