@@ -12,6 +12,7 @@ body{
 header{
     background-color: #fff;
     height: 9vh;
+    min-height: 40px;
 }
 
 footer{
@@ -53,7 +54,7 @@ main{
 }
 
 .header_container img{
-    width: 5%;  
+    width: 40px;
 }
 
 .field{
@@ -68,8 +69,10 @@ main{
 }
 
 .field .text{
-    text-align: center;
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .field .cell{
