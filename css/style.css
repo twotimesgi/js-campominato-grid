@@ -64,13 +64,16 @@ main{
     transform: translate(-50%,-50%);
     display: flex;
     flex-wrap: wrap; 
-    height: 40vw;
-    width: 40vw;  
+    height: 30vw;
+    width: 30vw;
+    min-width: 500px;
+    min-height: 500px;
 }
 
 .field .text{
     position: absolute;
     top: 50%;
+    text-align: center;
     left: 50%;
     transform: translate(-50%,-50%);
 }

@@ -3,7 +3,6 @@ let playBtn = document.getElementById("playBtn");
 let cellN;
 let text = document.querySelector(".text");
 let field = document.querySelector(".field");
-let perRow;
 
 playBtn.addEventListener("click",function(){
     field.innerHTML = "";
@@ -16,11 +15,9 @@ playBtn.addEventListener("click",function(){
             break;
         case 'Medium':
             cellN = 81;
-            perRow = "9";
             break;
         case 'Hard':
             cellN = 100;
-            perRow = "10";
             break;
     }
     
