@@ -1,27 +1,16 @@
 let difficultyElem = document.getElementById("difficulty");
 let playBtn = document.getElementById("playBtn");
-let cellN;
 let text = document.querySelector(".text");
 let field = document.querySelector(".field");
+let difficultyLvl = [49,81,100];
 
 playBtn.addEventListener("click",function(){
     field.innerHTML = "";
+    field.classList.add("field-borders");
     text.style.display = "none";
     field.dataset.diff = difficultyElem.value;
-
-    switch(difficultyElem.value){
-        case 'Easy':
-            cellN = 49;
-            break;
-        case 'Medium':
-            cellN = 81;
-            break;
-        case 'Hard':
-            cellN = 100;
-            break;
-    }
     
-    for(let i = 1; i <= cellN; i++){
+    for(let i = 1; i <= difficultyLvl[difficultyElem.value]; i++){
         let cell = document.createElement("div");
         cell.innerHTML = i;
         cell.classList.add("cell");

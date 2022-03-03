@@ -70,6 +70,11 @@ main{
     min-height: 500px;
 }
 
+.field-borders{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
 .field .text{
     position: absolute;
     top: 50%;
@@ -78,24 +83,25 @@ main{
     transform: translate(-50%,-50%);
 }
 
-.field .cell{
-border: 1px solid black;
+.cell{
+border-left: 1px solid black;
+border-top: 1px solid black;
 display: flex;
 justify-content: center;
 align-items: center; 
 }
 
-.field[data-diff="Easy"] .cell{
+.field[data-diff="0"] .cell{
     width: calc(100% / 7);
     height: calc(100% / 7);
 }
 
-.field[data-diff="Medium"] .cell{
+.field[data-diff="1"] .cell{
     width: calc(100% / 9);
     height: calc(100% / 9);
 } 
 
-.field[data-diff="Hard"] .cell{
+.field[data-diff="2"] .cell{
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
